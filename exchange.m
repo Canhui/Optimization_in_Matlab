@@ -12,5 +12,7 @@ A([1:p-1, p+1:s],[1:q-1, q+1:t]) = A([1:p-1, p+1:s],[1:q-1, q+1:t])+A([1:p-1,
 p+1:s],q)*A(p,[1:q-1, q+1:t]);
 
 % step 4: compute the pivot column
-A([1:p-1, p+1:s], q) = A([1:p-1, p+1:s], q)*A(p, q);% exchange labels
+A([1:p-1, p+1:s], q) = A([1:p-1, p+1:s], q)*A(p, q);
+
+% exchange labels
 h=left(p); left(p)=top(q); top(q)=h;
